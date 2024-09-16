@@ -13,12 +13,10 @@ public class Personne {
         return age;
     }
 
-  
-
     public Personne(String nom, int age) {
         this.nom = nom;
         this.age = age;
     }
 
-    // Getters et Setters
+  
 }
