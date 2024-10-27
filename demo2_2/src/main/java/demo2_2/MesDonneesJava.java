@@ -1,13 +1,11 @@
 package demo2_2;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import demo2_2.validateur.Modele;
 
-@SuppressWarnings("serial")
 
 public class MesDonneesJava extends Modele<MesDonneesJava> {
 	
@@ -37,7 +35,7 @@ public class MesDonneesJava extends Modele<MesDonneesJava> {
 		// Arbre      ... new MonArbre
 		
 		
-		Map<String, Object> maRacine = new NtroHashMap();
+		Map<String, Object> maRacine = new NtroHashMap<>();
 		this.racine = maRacine;
 		
 		List<Object> items = new ArrayList<>();

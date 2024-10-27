@@ -1,6 +1,5 @@
 rootProject.name = 'exemples3c6'
 
-
 include 'demo1_2'
 
 include 'demo2_1'

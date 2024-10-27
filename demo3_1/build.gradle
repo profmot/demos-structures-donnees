@@ -9,7 +9,7 @@ dependencies {
         implementation files("../libs/${it}-${version}.jar")
     }
 
-    demo1_2_gr1Dependencies.split(',').each {
+    demo1_2Dependencies.split(',').each {
         implementation files("../libs/${it}-${version}.jar")
     }
 

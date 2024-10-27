@@ -3,7 +3,8 @@ package demo4_1;
 import demo4_1.validateur.Modele;
 
 @SuppressWarnings("serial")
-public class ListeNaiveGr2 extends Modele<ListeNaiveGr2> {
+public class ListeNaiveGr1 extends Modele<ListeNaiveGr1> {
+    
     
     private char[] valeurs = new char[0];
     
@@ -18,66 +19,72 @@ public class ListeNaiveGr2 extends Modele<ListeNaiveGr2> {
         this.add('d');
         this.add('e');
         this.add('f');
-        this.indexOf('d');
-        this.removeValue('d');
+        int i = this.indexOf('d');
+        System.out.println(i);
+
         this.removeIndex(2);
+
+        this.removeValue('d');
         
         this.addAll(new char[] {'5','d','c','f'});
 
     }
 
-    private void addAll(char[] cs) {
-        for(char c : cs) {
-            add(c);
-        }
-    }
-
-    private int indexOf(char c) {
-        int indiceDe = -1;
-
-        for(int i = 0; i < valeurs.length; i++) {
-            if(valeurs[i] == c) {
-                indiceDe = i;
-                break;
-            }
-        }
-        
-        return indiceDe;
-    }
-
     private void add(char c) {
         
-        char[] unPlusGrand = new char[valeurs.length+1];
+        char[] unPlusGrand = new char[valeurs.length + 1];
         
         for(int i = 0; i < valeurs.length; i++) {
+            
             unPlusGrand[i] = valeurs[i];
+            
+            
         }
         
         unPlusGrand[unPlusGrand.length - 1] = c;
         
-        valeurs = unPlusGrand;
-    }
-
-    private void removeIndex(int indice) {
+        this.valeurs = unPlusGrand;
         
-        char[] unPlusPetit = new char[valeurs.length - 1];
+        
+        
+    }
+    
+    
+    
+
+    private int indexOf(char c) {
+        int indice = -1;
         
         for(int i = 0; i < valeurs.length; i++) {
-            if(i < indice) {
-                
-                unPlusPetit[i] = valeurs[i];
-                
-                
-            }else if(i > indice) {
-                
-                unPlusPetit[i-1] = valeurs[i];
-                
+            if(valeurs[i] == c) {
+                indice = i;
+                break;
             }
-            
+        }
+        
+        return indice;
+    }
+
+    private void addAll(char[] valeurs_a_ajouter) {
+        for(char c : valeurs_a_ajouter) {
+            add(c);
+        }
+    }
+
+
+
+    private void removeIndex(int indice) {
+        char[] unPlusPetit = new char[valeurs.length - 1];
+        
+        for(int i = 0; i < indice; i++) {
+            unPlusPetit[i] = valeurs[i];
+        }
+
+        for(int i = indice+1; i < valeurs.length; i++) {
+            unPlusPetit[i-1] = valeurs[i];
         }
         
         valeurs = unPlusPetit;
-        
     }
 
 
@@ -90,7 +97,7 @@ public class ListeNaiveGr2 extends Modele<ListeNaiveGr2> {
     }
 
     public static void main(String[] args) {
-        new ListeNaiveGr2().initialize();
+        new ListeNaiveGr1().initialize();
     }
 
 }

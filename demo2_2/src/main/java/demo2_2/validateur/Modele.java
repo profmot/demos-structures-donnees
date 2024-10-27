@@ -3,7 +3,7 @@ package demo2_2.validateur;
 import ca.ntro.cards.validator.models.ValidatorModel;
 import ca.ntro.ntro_core_impl.reflection.object_graph.Initialize;
 
-@SuppressWarnings("serial")
+@SuppressWarnings("rawtypes")
 public class Modele<M extends Modele> extends ValidatorModel<M> implements Initialize {
 
 	@Override

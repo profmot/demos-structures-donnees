@@ -7,6 +7,7 @@ import ca.ntro.cards.validator.Validator;
 import ca.ntro.cards.validator.backend.GeneratorBackend;
 import demo2_2.MesDonneesJava;
 
+@SuppressWarnings("rawtypes")
 public class Generer extends GeneratorApp<Modele>{
 
 	public static void main(String[] args) {

@@ -5,10 +5,14 @@ import demo4_1.validateur.Modele;
 @SuppressWarnings("serial")
 public class ListeNaive extends Modele<ListeNaive> {
     
+    
 	private char[] valeurs = new char[0];
+    
+    
 
     @Override
     public void initialize() {
+        
         this.add('a');
         this.add('b');
         this.add('c');
@@ -16,21 +20,13 @@ public class ListeNaive extends Modele<ListeNaive> {
         this.add('e');
         this.add('f');
         int i = this.indexOf('d');
-        System.out.println("indice de d: ");
-        System.out.println( i);
-
-		System.out.println("taille de la liste: ");
-        System.out.println(this.size());
+        System.out.println(i);
 
         this.removeIndex(2);
 
         this.removeValue('d');
-		System.out.println("taille de la liste: ");
-        System.out.println(this.size());
         
         this.addAll(new char[] {'5','d','c','f'});
-		System.out.println("taille de la liste: ");
-        System.out.println(this.size());
 
     }
 
@@ -52,6 +48,9 @@ public class ListeNaive extends Modele<ListeNaive> {
 
     }
     
+    
+    
+
     private int indexOf(char c) {
     	int indice = -1;
     	
@@ -71,6 +70,8 @@ public class ListeNaive extends Modele<ListeNaive> {
     	}
     }
 
+
+
     private void removeIndex(int indice) {
     	char[] valeursOriginales = valeurs;
 
@@ -83,17 +84,17 @@ public class ListeNaive extends Modele<ListeNaive> {
     	}
     }
 
+
+    
     private void removeValue(char c) {
     	int indiceARetirer = indexOf(c);
     	if(indiceARetirer >= 0) {
     		removeIndex(indiceARetirer);
     	}
     }
-	public int size(){
-		return this.valeurs.length;
-	}
 
     public static void main(String[] args) {
         new ListeNaive().initialize();
     }
+
 }

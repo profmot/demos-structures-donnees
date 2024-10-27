@@ -3,10 +3,8 @@ package demo2_3;
 import java.util.Date;
 import java.util.Random;
 
-import ca.ntro.app.Ntro;
 import demo2_3.validateur.Modele;
 
-@SuppressWarnings("serial")
 
 public class Arbre extends Modele<Arbre> {
 	
