@@ -1,5 +1,7 @@
 # 3c6_exemples
 
+depot cloné de https://gitlab.com/mathieu-bergeron/3c6_exemples fait par Mathieu Bergeron.
+
 1. Pour créer les projets Eclipse
 
     ```bash
