@@ -6,7 +6,7 @@ public class ListeNaiveGr2  {
     private char[] valeurs = new char[0];
     
     public void initialize() {
-        
+        /*his.add('a');
         this.add('a');
         this.add('b');
         this.add('c');
@@ -16,78 +16,47 @@ public class ListeNaiveGr2  {
         int i = this.indexOf('d');
         System.out.println("indice de d: ");
         System.out.println( i);
-        this.removeValue('d');
+
+		System.out.println("taille de la liste: ");
+        System.out.println(this.size());
+
         this.removeIndex(2);
+
+        this.removeValue('d');
+		System.out.println("taille de la liste: ");
+        System.out.println(this.size());
         
         this.addAll(new char[] {'5','d','c','f'});
+		System.out.println("taille de la liste: ");
+        System.out.println(this.size());
 
+ */
     }
 
     private void addAll(char[] cs) {
-        for(char c : cs) {
-            add(c);
-        }
+      
     }
 
     private int indexOf(char c) {
-        int indiceDe = -1;
-
-        for(int i = 0; i < valeurs.length; i++) {
-            if(valeurs[i] == c) {
-                indiceDe = i;
-                break;
-            }
-        }
-        
-        return indiceDe;
     }
 
     private void add(char c) {
-        
-        char[] unPlusGrand = new char[valeurs.length+1];
-        
-        for(int i = 0; i < valeurs.length; i++) {
-            unPlusGrand[i] = valeurs[i];
-        }
-        
-        unPlusGrand[unPlusGrand.length - 1] = c;
-        
-        valeurs = unPlusGrand;
     }
 
     private void removeIndex(int indice) {
         
-        char[] unPlusPetit = new char[valeurs.length - 1];
-        
-        for(int i = 0; i < valeurs.length; i++) {
-            if(i < indice) {
-                
-                unPlusPetit[i] = valeurs[i];
-                
-                
-            }else if(i > indice) {
-                
-                unPlusPetit[i-1] = valeurs[i];
-                
-            }
-            
-        }
-        
-        valeurs = unPlusPetit;
-        
     }
 
+    public int size(){
+	}
 
     
     private void removeValue(char c) {
-        int indice = indexOf(c);
-        if(indice>=0) {
-            removeIndex(indice);
-        }
     }
 
     public static void main(String[] args) {
         new ListeNaiveGr2().initialize();
     }
 
+        t
 }
