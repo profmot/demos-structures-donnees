@@ -35,9 +35,9 @@ public class Demo5_2 extends Modele<Demo5_2> {
 
         map.put("amina", 18);
 
-        //int valeurAlice = (int) map.get("alice");
+        int valeurAlice = (int) map.get("alice");
 
-        //System.out.println(valeurAlice);
+        System.out.println(valeurAlice);
         
         
         

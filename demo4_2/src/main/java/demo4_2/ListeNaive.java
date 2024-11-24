@@ -3,56 +3,40 @@ package demo4_2;
 @SuppressWarnings("serial")
 public class ListeNaive { 
     
-    
-	private char[] valeurs = new char[0];
-    
+    private final int TAILLE_INITIALE=2;
+	private char[] valeurs = new char[TAILLE_INITIALE];
+    private int indiceDernier = -1;
 
     public void initialize() {
-        this.add('a');
-        this.add('b');
-        this.add('c');
-        this.add('d');
-        this.add('e');
-        this.add('f');
-
         
-        char el = this.get(3);
-        System.out.println(el);
-
-        int i = this.indexOf('d');
-        System.out.println(i);
-
-        this.removeIndex(0);
-        this.removeIndex(1);
-
-        //this.removeValue('d');
-        
-        this.addAll(new char[] {'5','d','c','f'});
-
        
     }
 
     public void set(int position, char valeur){
-        this.valeurs[position]=valeur;
+        if(position>=0 && position<=indiceDernier){
+
+            this.valeurs[position]=valeur;
+        } else{
+            throw new IndexOutOfBoundsException('position en dehors de la taille de notre tableau');
+        }
     }
 
     public char get(int position){
         return this.valeurs[position];
     }
 
+
+    private void agrandir(){
+
+    }
+
 	private void add(char c) {
-        // créer un nouveau tableau de char de longueur + 1
-        char[] nouveauTableau = new char[valeurs.length+1];
-        
-        // boucle qui ajoute tous les éléments déjà présent dans le tableau valeurs
-        for(int i =0; i<valeurs.length;i++){
-            nouveauTableau[i] = valeurs[i];
-        }
-    
-        // ajout du nouvel élément à la dernière position du tableau
-        nouveauTableau[nouveauTableau.length -1] = c; 
-        //assigner valeur du nouveau tableau
-        this.valeurs = nouveauTableau;
+       if (indiceDernier== valeurs.length-1){
+         agrandir();
+       }
+       this.valeurs[indiceDernier+1]= c ;
+       indiceDernier++;
+
     }
 
     private void addAll(char[] cs) {
@@ -91,7 +75,7 @@ public class ListeNaive {
     }
 
 	public int size(){
-		return valeurs.length;
+		return indiceDernier +1;
 	}
 
     
