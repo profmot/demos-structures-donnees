@@ -8,26 +8,23 @@ public class Demo2 extends Modele<Demo2> {
 		new Demo2().initialize();
 	}
 
-	
-	private Affichable[] banques = new Affichable[3];
-	private Usager usager = new Usager();
-
-
 	@Override
 	public void initialize() {
 
-		banques[0] = new BanqueEnLigne("BNC", 5, "bnc.ca");
-		banques[1] = new BanqueTrad("Desjardins", 3);
+		Personnage[] personnages = new Personnage[2];
 
+		personnages[0] = new Guerrier("Arthas");
+        personnages[1] = new Mage("Jaina");
 
+        // Polymorphisme : même type abstrait, comportements différents
+        personnages[0].attaquer();
+        personnages[1].attaquer();
 
+        personnages[0].defendre();
+        personnages[1].defendre();
 
-		banques[0].afficher(System.err);
-		banques[1].afficher(System.out);
-		usager.afficher(System.out);
-
-
-
+        personnages[0].subirDegats(30);
+        personnages[1].subirDegats(50);
 
 	}
 
