@@ -15,6 +15,8 @@ public class Mage extends Personnage {
         System.out.println(getNom() + " se protège avec un sort magique !");
     }
 
+
+
     public void lancerSort() {
         System.out.println(getNom() + " lance un sort de feu !!");
     }

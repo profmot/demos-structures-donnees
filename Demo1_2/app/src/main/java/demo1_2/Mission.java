@@ -22,11 +22,13 @@ public abstract class Mission {
         System.out.println("Mission: " + nomMission);
     }
 
-    public final void executer(Personnage p) {        // méthode commune (héritée telle quelle)
+    public final void executer(Combattant p) {        // méthode commune (héritée telle quelle)
         System.out.println("\n=== Mission avec " + p.getNom() + " ===");
-        preparer(p);
-        demarrer(p);
-        terminer(p);
+        p.attaquer();
+        p.defendre();
+        //preparer(p);
+        ///demarrer(p);
+ //       terminer(p);
 
     }
 

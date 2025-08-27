@@ -2,9 +2,10 @@ package demo1_2;
 
 class MissionCombat extends Mission {
 
-    private String nomMission;
     public MissionCombat(String nomMission) {
         super(nomMission);
+
+        this.setNomMission("recherche et destruction");
         
     }
 

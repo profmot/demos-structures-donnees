@@ -9,6 +9,7 @@ public abstract class Personnage implements Combattant {
         this.pointsDeVie = pointsDeVie;
     }
 
+    @Override
     public String getNom() {
         return nom;
     }
