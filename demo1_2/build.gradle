@@ -1,0 +1,36 @@
+plugins {
+    id 'local-java-plugin'
+    id 'local-fx-plugin'
+}
+
+// Force la toolchain en Java 17 pour ce module
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+// S'assure que le compilateur cible bien le langage 17 (équivaut à --release 17)
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+}
+
+dependencies {
+    ntroDependencies.split(',').each {
+        implementation files("../libs/${it}-${version}.jar")
+    }
+
+    demo1_2Dependencies.split(',').each {
+        implementation files("../libs/${it}-${version}.jar")
+    }
+
+    implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.8'
+    implementation 'guru.nidi:graphviz-java-all-j2v8:0.18.0'
+}
+
+task(demo1_2, dependsOn: 'classes', type: JavaExec) {
+   main= "demo1_2.validateur.Generer"
+   classpath = sourceSets.main.runtimeClasspath
+   standardInput = System.in
+   jvmArgs('-Dfile.encoding=UTF-8')
+}

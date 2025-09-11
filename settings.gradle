@@ -1,0 +1,31 @@
+rootProject.name = 'exemples3c6'
+
+include 'demo1_2'
+
+
+include 'demo2_1'
+include 'demo2_2'
+include 'demo2_3'
+
+include 'demo3_1'
+include 'demo3_1_2023'
+
+include 'demo4_1'
+include 'demo4_2'
+include 'demo4_3a'
+include 'demo4_3b'
+
+include 'demo5_1'
+include 'demo5_2'
+
+buildscript {
+
+    repositories {
+	    mavenCentral()
+	    maven {url "https://plugins.gradle.org/m2/"}
+    }
+
+    dependencies {
+        classpath 'org.openjfx:javafx-plugin:0.0.10'
+    }
+}
