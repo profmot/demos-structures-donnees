@@ -1,0 +1,57 @@
+{
+  "success": true,
+  "deck_id": "sses7nqkd4mc",
+  "cards": [
+    {
+      "code": "8C",
+      "image": "https://deckofcardsapi.com/static/img/8C.png",
+      "images": {
+        "svg": "https://deckofcardsapi.com/static/img/8C.svg",
+        "png": "https://deckofcardsapi.com/static/img/8C.png"
+      },
+      "value": "8",
+      "suit": "CLUBS"
+    },
+    {
+      "code": "JH",
+      "image": "https://deckofcardsapi.com/static/img/JH.png",
+      "images": {
+        "svg": "https://deckofcardsapi.com/static/img/JH.svg",
+        "png": "https://deckofcardsapi.com/static/img/JH.png"
+      },
+      "value": "JACK",
+      "suit": "HEARTS"
+    },
+    {
+      "code": "JC",
+      "image": "https://deckofcardsapi.com/static/img/JC.png",
+      "images": {
+        "svg": "https://deckofcardsapi.com/static/img/JC.svg",
+        "png": "https://deckofcardsapi.com/static/img/JC.png"
+      },
+      "value": "JACK",
+      "suit": "CLUBS"
+    },
+    {
+      "code": "7S",
+      "image": "https://deckofcardsapi.com/static/img/7S.png",
+      "images": {
+        "svg": "https://deckofcardsapi.com/static/img/7S.svg",
+        "png": "https://deckofcardsapi.com/static/img/7S.png"
+      },
+      "value": "7",
+      "suit": "SPADES"
+    },
+    {
+      "code": "0H",
+      "image": "https://deckofcardsapi.com/static/img/0H.png",
+      "images": {
+        "svg": "https://deckofcardsapi.com/static/img/0H.svg",
+        "png": "https://deckofcardsapi.com/static/img/0H.png"
+      },
+      "value": "10",
+      "suit": "HEARTS"
+    }
+  ],
+  "remaining": 47
+}
