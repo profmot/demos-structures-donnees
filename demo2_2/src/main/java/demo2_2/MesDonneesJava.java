@@ -28,9 +28,9 @@ public class MesDonneesJava extends Modele<MesDonneesJava> {
 	@Override
 	public void initialize() {
 
-		Map<String, Object> maRacine = new HashMap();
+		Map<String, Object> maRacine = new HashMap<>();
 		GardeRobe maGardeRobe = new GardeRobe();
-		maGardeRobe.setEmplacement("chambre");
+		maGardeRobe.emplacement = "chambre";
 
 		List<Object> monContenu = new ArrayList<>();
 		Map<String, Object> chapeau1 = new HashMap<>();
@@ -48,7 +48,7 @@ public class MesDonneesJava extends Modele<MesDonneesJava> {
 		monContenu.add(chapeau2);
 
 		maRacine.put("gardeRobe", maGardeRobe);
-		maGardeRobe.setContient(monContenu);
+		maGardeRobe.contient = monContenu;
 		this.setRacine(maRacine);
 
 	}
